@@ -1,10 +1,15 @@
 <template>
   <article class="prose dark:prose-invert">
-    <ContentDoc path="/" />
+    <ContentDoc v-if="data" :value="data" />
+    <div v-else-if="pending">Loading...</div>
   </article>
 </template>
 
 <script setup>
+const { data, pending } = await useAsyncData('index', () => 
+  queryContent('index').findOne()
+);
+
 useSeoMeta({
   title: "Main Page",
   description: "This is the main page",
@@ -26,7 +31,7 @@ useHead({
     {
       rel: "icon",
       type: "image/png",
-      href: "/favicon.png",
+      href: "/Portfolio/favicon.png",
     },
   ],
 });
