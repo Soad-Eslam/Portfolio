@@ -1,14 +1,10 @@
 <template>
   <article class="prose dark:prose-invert">
-    <ContentDoc v-if="data" :value="data" />
-    <div v-else-if="pending">Loading...</div>
+    <ContentDoc path="/" />
   </article>
 </template>
 
 <script setup>
-const { data, pending } = await useAsyncData('index', () => 
-  queryContent('index').findOne()
-);
 
 useSeoMeta({
   title: "Main Page",
