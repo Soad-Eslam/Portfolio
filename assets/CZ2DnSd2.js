@@ -1,0 +1,1 @@
+import r from"./BG1Pitmj.js";import{v as s,J as u,x as c,g as m}from"./BsnxDntB.js";import"./B8IaAclc.js";const p=s({name:"Markdown",extends:r,setup(t){const{parent:n}=u(),{between:e,default:a}=c(),o=m(()=>typeof t.unwrap=="string"?t.unwrap.split(" "):["*"]);return{fallbackSlot:a,tags:o,between:e,parent:n}}}),l=Object.assign(p,{__name:"Markdown"});export{l as default};
