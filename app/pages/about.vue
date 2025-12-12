@@ -1,9 +1,8 @@
 <script setup>
-useHead({
-  meta: [
-    { name: 'description', content: 'meta description of the page' }
-  ]
-})
+
+  useHead({
+  title: "about",
+});
 </script>
 
 <template>
