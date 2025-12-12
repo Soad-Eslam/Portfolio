@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'v', mode: 'out-in' },
+    baseURL: '/Portfolio/',     // required!
+    buildAssetsDir: 'assets'
   },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -18,9 +20,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  nitro:{
-    prerender:{
-      routes:['/sitemap.xml']
-    }
+  nitro: {
+    preset: 'github_pages'
   }
 });
